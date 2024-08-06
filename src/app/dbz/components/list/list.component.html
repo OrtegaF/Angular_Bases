@@ -7,7 +7,7 @@
          let iseven = even;
          let isOdd = odd;
          " 
-        class="list-group-item"
+        class="list-group-item d-flex justify-content-between align-items-center"
             [ngClass]="{
             'list-group-item-warning':isLast,
             'list-group-item-primary':iseven,
@@ -18,15 +18,13 @@
          El último  isLast
          Es par iseven
          Es impar isOdd -->
-
-            <span class="text-primary">{{i+1}}. </span>
-            <span>{{character.name}}  -</span>
-            <strong>Power:</strong>
-            <span>{{character.power}}</span>
-            <!-- <span>Es el primero: {{isFirst}} | </span>
-            <span> Es el ultimo: {{isLast}} | </span>
-            <span> Es pas: {{iseven}} | </span>
-            <span> Es impar: {{isOdd}} </span> -->
+            <div>
+                <span class="text-primary">{{i+1}}. </span>
+                <span>{{character.name}}  -</span>
+                <strong>Power:</strong>
+                <span>{{character.power}}</span>
+            </div>
+            <button (click)="emitDeleteC(i)" class="btn btn-danger">X</button>
         </li>
         
     </ul>
